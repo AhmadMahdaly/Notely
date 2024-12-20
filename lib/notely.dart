@@ -6,6 +6,13 @@ class Notely extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        textTheme: Theme.of(
+          context,
+        ).textTheme.apply(
+              fontFamily: 'Nunito',
+            ),
+      ),
       home: Container(),
     );
   }
