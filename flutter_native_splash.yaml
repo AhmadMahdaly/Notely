@@ -1,0 +1,9 @@
+flutter_native_splash:
+  color: "#FFFFFF"
+  image: assets/images/splash/notely_splash.png
+  android_12:
+    image: assets/images/splash/notely_splash_12.png
+    # Splash screen background color.
+    color: "#FFFFFF"
+    # App icon background color.
+    icon_background_color: "#FFFFFF"
