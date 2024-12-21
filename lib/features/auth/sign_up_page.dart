@@ -67,7 +67,15 @@ class SignUpPage extends StatelessWidget {
                 hintText: '########',
               ),
               const H(h: 60),
-              const CustomButton(text: 'Create Account', page: LoginPage()),
+              CustomButton(
+                text: 'Create Account',
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const LoginPage()),
+                  );
+                },
+              ),
               const H(h: 20),
               LineToSign(
                 onTap: () {

@@ -12,10 +12,13 @@ class SignUpCustomTextFeild extends StatelessWidget {
         color: kTextColor,
         fontSize: 16.sp,
         fontWeight: FontWeight.w700,
-        height: 2.sp,
         letterSpacing: 0.64,
       ),
       decoration: InputDecoration(
+        contentPadding: EdgeInsets.symmetric(
+          vertical: 18.sp,
+          horizontal: 8.sp,
+        ),
         hintText: hintText,
         hintStyle: TextStyle(
           color: kTextColor.withOpacity(0.8),

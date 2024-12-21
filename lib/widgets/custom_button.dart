@@ -3,22 +3,15 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:notely/constants/color_constants.dart';
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({required this.text, required this.page, super.key});
+  const CustomButton({required this.text, this.onTap, super.key});
   final String text;
-  final Widget page;
+  final void Function()? onTap;
   @override
   Widget build(BuildContext context) {
     return InkWell(
       highlightColor: Colors.transparent,
       splashColor: Colors.transparent,
-      onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => page,
-          ),
-        );
-      },
+      onTap: () {},
       child: Container(
         alignment: Alignment.center,
         width: 319.sp,

@@ -4,7 +4,7 @@ import 'package:notely/components/height.dart';
 import 'package:notely/constants/color_constants.dart';
 import 'package:notely/features/auth/widgets/line_to_sign.dart';
 import 'package:notely/features/auth/widgets/sign_up_custom_text_feild.dart';
-import 'package:notely/screens/home_page.dart';
+import 'package:notely/screens/empty_home_page.dart';
 import 'package:notely/widgets/custom_button.dart';
 import 'package:notely/widgets/title_of_text_feild.dart';
 
@@ -61,7 +61,16 @@ class LoginPage extends StatelessWidget {
                 hintText: '########',
               ),
               const H(h: 150),
-              const CustomButton(text: 'Login', page: HomePage()),
+              CustomButton(
+                text: 'Login',
+                onTap: () {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const EmptyHomePage()),
+                  );
+                },
+              ),
               const H(h: 20),
               LineToSign(
                 onTap: () {

@@ -58,7 +58,15 @@ class OnboardPage extends StatelessWidget {
             const H(h: 88),
 
             /// Sign Up button
-            const CustomButton(text: 'GET STARTED', page: SignUpPage()),
+            CustomButton(
+              text: 'GET STARTED',
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const SignUpPage()),
+                );
+              },
+            ),
             const H(h: 20),
 
             /// Login button

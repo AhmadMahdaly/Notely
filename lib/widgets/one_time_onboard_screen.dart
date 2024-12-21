@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:notely/screens/home_page.dart';
+import 'package:notely/screens/empty_home_page.dart';
 import 'package:notely/screens/onboard_page.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -19,7 +19,7 @@ class _OneTimeOnboardState extends State<OneTimeOnboard> {
         if (snapshot.data != true) {
           return const OnboardPage();
         } else {
-          return const HomePage();
+          return const EmptyHomePage();
         }
       },
     );
