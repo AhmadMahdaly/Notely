@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:notely/components/height.dart';
 import 'package:notely/constants/color_constants.dart';
-import 'package:notely/screens/auth/login_page.dart';
-import 'package:notely/screens/auth/sign_up_page.dart';
+import 'package:notely/features/auth/sign_up_page.dart';
+import 'package:notely/features/auth/widgets/sign_up_widgets/already_have_account.dart';
+import 'package:notely/widgets/custom_button.dart';
 
 class OnboardPage extends StatelessWidget {
   const OnboardPage({super.key});
@@ -56,66 +57,11 @@ class OnboardPage extends StatelessWidget {
             const H(h: 88),
 
             /// Sign Up button
-            InkWell(
-              highlightColor: Colors.transparent,
-              splashColor: Colors.transparent,
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const SignUpPage(),
-                  ),
-                );
-              },
-              child: Container(
-                alignment: Alignment.center,
-                width: 319.sp,
-                height: 74.sp,
-                decoration: ShapeDecoration(
-                  color: kButtonColor,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12.sp),
-                  ),
-                ),
-                child: Text(
-                  'GET STARTED',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    color: kLightTextColor,
-                    fontSize: 20.sp,
-                    fontWeight: FontWeight.w900,
-                    height: 1.30.sp,
-                    letterSpacing: 2.40.sp,
-                  ),
-                ),
-              ),
-            ),
+            const CustomButton(text: 'GET STARTED', page: SignUpPage()),
             const H(h: 20),
 
             /// Login button
-            InkWell(
-              highlightColor: Colors.transparent,
-              splashColor: Colors.transparent,
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const LoginPage(),
-                  ),
-                );
-              },
-              child: Text(
-                'Already have an account?',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: kButtonColor,
-                  fontSize: 16.sp,
-                  fontWeight: FontWeight.w800,
-                  height: 1.30.sp,
-                  letterSpacing: 0.64.sp,
-                ),
-              ),
-            ),
+            const AlreadyHaveAccount(),
           ],
         ),
       ),
