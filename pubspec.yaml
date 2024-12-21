@@ -7,19 +7,20 @@ environment:
   sdk: ^3.5.4
 
 dependencies:
+  cupertino_icons: ^1.0.8
   flutter:
     sdk: flutter
-  cupertino_icons: ^1.0.8
-  flutter_screenutil: ^5.9.3
-  very_good_analysis: ^7.0.0
-  icons_launcher: ^3.0.0
   flutter_native_splash: ^2.4.3
+  flutter_screenutil: ^5.9.3
+  icons_launcher: ^3.0.0
   shared_preferences: ^2.3.4
+  very_good_analysis: ^7.0.0
 
 dev_dependencies:
+  flutter_lints: ^4.0.0
   flutter_test:
     sdk: flutter
-  flutter_lints: ^4.0.0
+
 
 
 flutter:
@@ -39,4 +40,6 @@ flutter:
       fonts:
         - asset: assets/fonts/nunito/Nunito-Regular.ttf
         - asset: assets/fonts/nunito/Nunito-Medium.ttf
-          weight: 700
+          weight: 600
+        - asset: assets/fonts/nunito/Nunito-Bold.ttf
+          weight: 900

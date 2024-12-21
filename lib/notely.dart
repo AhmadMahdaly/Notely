@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:notely/constants/color_constants.dart';
+import 'package:notely/widgets/one_time_onboard_screen.dart';
 
 class Notely extends StatefulWidget {
   const Notely({super.key});
@@ -36,13 +38,23 @@ class _NotelyState extends State<Notely> {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
+          appBarTheme: const AppBarTheme(
+            color: kBackgroundColor,
+            centerTitle: true,
+            titleTextStyle: TextStyle(
+              color: kTitleTextColor,
+              fontFamily: 'Titan One',
+              fontWeight: FontWeight.w400,
+            ),
+          ),
+          scaffoldBackgroundColor: kBackgroundColor,
           textTheme: Theme.of(
             context,
           ).textTheme.apply(
                 fontFamily: 'Nunito',
               ),
         ),
-        home: const Scaffold(),
+        home: const OneTimeOnboard(),
       ),
     );
   }
