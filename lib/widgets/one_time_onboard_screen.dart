@@ -19,7 +19,7 @@ class _OneTimeOnboardState extends State<OneTimeOnboard> {
         if (snapshot.data != true) {
           return const OnboardPage();
         } else {
-          return const OnboardPage();
+          return const HomePage();
         }
       },
     );

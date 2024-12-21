@@ -1,26 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:notely/constants/color_constants.dart';
-import 'package:notely/features/auth/login_page.dart';
 
-class AlreadyHaveAccount extends StatelessWidget {
-  const AlreadyHaveAccount({super.key});
-
+class LineToSign extends StatelessWidget {
+  const LineToSign({required this.text, super.key, this.onTap});
+  final String text;
+  final void Function()? onTap;
   @override
   Widget build(BuildContext context) {
     return InkWell(
       highlightColor: Colors.transparent,
       splashColor: Colors.transparent,
-      onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => const LoginPage(),
-          ),
-        );
-      },
+      onTap: onTap,
       child: Text(
-        'Already have an account?',
+        text,
         textAlign: TextAlign.center,
         style: TextStyle(
           color: kButtonColor,

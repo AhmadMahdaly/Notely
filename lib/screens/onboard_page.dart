@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:notely/components/height.dart';
 import 'package:notely/constants/color_constants.dart';
+import 'package:notely/features/auth/login_page.dart';
 import 'package:notely/features/auth/sign_up_page.dart';
-import 'package:notely/features/auth/widgets/sign_up_widgets/already_have_account.dart';
+import 'package:notely/features/auth/widgets/line_to_sign.dart';
 import 'package:notely/widgets/custom_button.dart';
 
 class OnboardPage extends StatelessWidget {
@@ -61,7 +62,17 @@ class OnboardPage extends StatelessWidget {
             const H(h: 20),
 
             /// Login button
-            const AlreadyHaveAccount(),
+            LineToSign(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const LoginPage(),
+                  ),
+                );
+              },
+              text: 'Already have an account?',
+            ),
           ],
         ),
       ),
