@@ -3,8 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:notely/components/height.dart';
 import 'package:notely/constants/color_constants.dart';
 import 'package:notely/features/auth/login_page.dart';
+import 'package:notely/features/auth/widgets/custom_text_feild.dart';
 import 'package:notely/features/auth/widgets/line_to_sign.dart';
-import 'package:notely/features/auth/widgets/sign_up_custom_text_feild.dart';
 import 'package:notely/widgets/custom_button.dart';
 import 'package:notely/widgets/title_of_text_feild.dart';
 

@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:notely/components/height.dart';
 import 'package:notely/constants/color_constants.dart';
+import 'package:notely/features/auth/widgets/custom_text_feild.dart';
 import 'package:notely/features/auth/widgets/line_to_sign.dart';
-import 'package:notely/features/auth/widgets/sign_up_custom_text_feild.dart';
 import 'package:notely/screens/empty_home_page.dart';
 import 'package:notely/widgets/custom_button.dart';
 import 'package:notely/widgets/title_of_text_feild.dart';
@@ -67,7 +67,8 @@ class LoginPage extends StatelessWidget {
                   Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const EmptyHomePage()),
+                      builder: (context) => const EmptyHomePage(),
+                    ),
                   );
                 },
               ),

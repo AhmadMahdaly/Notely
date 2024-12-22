@@ -3,7 +3,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:notely/constants/color_constants.dart';
 
 class TitleOfTextFeild extends StatelessWidget {
-  const TitleOfTextFeild({super.key, required this.title});
+  const TitleOfTextFeild({
+    required this.title,
+    super.key,
+  });
   final String title;
   @override
   Widget build(BuildContext context) {

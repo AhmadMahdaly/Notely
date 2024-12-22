@@ -11,7 +11,7 @@ class CustomButton extends StatelessWidget {
     return InkWell(
       highlightColor: Colors.transparent,
       splashColor: Colors.transparent,
-      onTap: () {},
+      onTap: onTap,
       child: Container(
         alignment: Alignment.center,
         width: 319.sp,

@@ -11,4 +11,4 @@ const kTextColor = Color(0xFF595550);
 const kBackgroundColor = Color(0xFFF8EEE2);
 const kButtonColor = Color(0xFFD8614B);
 const kLightTextColor = Color(0xFFFFFBFA);
-const kBorder = Color(0xFFF2E5D5);
+const kBorderColor = Color(0xFFF2E5D5);

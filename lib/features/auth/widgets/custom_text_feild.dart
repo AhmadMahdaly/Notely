@@ -3,7 +3,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:notely/constants/color_constants.dart';
 
 class SignUpCustomTextFeild extends StatelessWidget {
-  const SignUpCustomTextFeild({super.key, required this.hintText});
+  const SignUpCustomTextFeild({
+    required this.hintText,
+    super.key,
+  });
   final String hintText;
   @override
   Widget build(BuildContext context) {
@@ -30,14 +33,14 @@ class SignUpCustomTextFeild extends StatelessWidget {
           borderRadius: BorderRadius.circular(12.sp),
           borderSide: BorderSide(
             width: 1.sp,
-            color: kBorder,
+            color: kBorderColor,
           ),
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12.sp),
           borderSide: BorderSide(
             width: 1.sp,
-            color: kBorder,
+            color: kBorderColor,
           ),
         ),
       ),

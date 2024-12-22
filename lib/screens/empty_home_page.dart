@@ -5,6 +5,7 @@ import 'package:notely/components/height.dart';
 import 'package:notely/components/weight.dart';
 import 'package:notely/constants/color_constants.dart';
 import 'package:notely/features/auth/widgets/line_to_sign.dart';
+import 'package:notely/screens/create_note.dart';
 import 'package:notely/widgets/custom_button.dart';
 
 class EmptyHomePage extends StatelessWidget {
@@ -69,12 +70,20 @@ class EmptyHomePage extends StatelessWidget {
                 ),
               ),
               const H(h: 75),
-              const CustomButton(
+              CustomButton(
                 text: 'Create A Note',
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const CreateNote(),
+                    ),
+                  );
+                },
               ),
               const H(h: 20),
               const LineToSign(
-                text: 'Already have an account?',
+                text: 'Import Notes',
               ),
             ],
           ),
